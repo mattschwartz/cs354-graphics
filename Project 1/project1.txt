@@ -1,0 +1,24 @@
+Project 1 Individual Written Questions
+
+Name: Matt Schwartz
+Email Address: mattschwartz@utexas.edu
+Note: 1 late day used
+
+1.  You would need to call functions such as glVertex3fv() or glVertex3f() to pass the values from the vertex array to these methods to be drawn to the screen.  The original array wouldn't change at all; it would only be read from in order to perform the object rendering algorithm.  An array of indices might be useful when drawing the object to the screen to point to the data in the correct order to be drawn.  You would need an indices array.
+
+
+2.  There are 4 (GL_MODELVIEW, GL_PROJECTION, GL_TEXTURE, and GL_COLOR).  GL_MODELVIEW places objects in space.  GL_PROJECTION is what is currently being shown to the camera (and thus the viewing window).  GL_TEXTURE adjusts texture coordinates.  GL_COLOR adjusts vertex colors.
+
+
+3.  You could create three different cameras, each initially looking at the center with glLoadIdentity().  Then, using gluLookAt(), you can move the camera to positions in front of, to the side of, and above the object.  The frustum would hold all three cameras.
+
+
+4.  Glut acts as an interface to OpenGL by providing functions such as: those to create common shapes, keyboard and mouse input, and window creation.  The book's definition is: "GLUT provides the minimum functionality that should be expected in any modern windowing system."
+
+
+5. Single frame buffers are often not the utility of choice in graphics applications because most displays have refresh rates of 60-100 Hz, while applications can alter the buffer at any time.  This can create a "somewhat broken-up display", especially if many objects are in motion.  The reason for using single frame buffers is for slower computers with graphics cards that have little memory.  Double buffers have a front buffer and a back buffer.  The front buffer is what is displayed to the screen.  The back buffer is constructed and then the two buffers are swapped when it is complete.  This is typically used in modern computers since most have sufficient memory.
+
+
+6.  x = (1/m) * (y − b), when m > 1.  This equation fixes two problems:  One pixel per column which causes lines of slope > 1 to have gaps and vertical lines which cause divide by zero errors. [From slide 13: http://www.cs.utexas.edu/~bajaj/graphics2012/cs354/lectures/lect02.pdf]
+
+

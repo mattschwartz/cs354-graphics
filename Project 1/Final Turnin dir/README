@@ -1,0 +1,27 @@
+/*
+ * README
+ * ------
+ * Put the results of the Performance Test here.  Also, include the names
+ * of your team members and any special instructions for compiling, etc.,
+ * if you did something besides the standard Makefile.
+ *
+ * Group Members: Matt Schwartz
+ */
+
+                        Performance  Test
+  Test #  |                Description                |  Result
+----------|-------------------------------------------|----------
+     1    |  Cube using glut (Solid)                  |  0.23 s     
+	 2    |  Cube using glut (Wire)                   |  0.22 s
+     3    |  Cube using Quadrilaterals                |  0.22 s      
+     4    |  Cube using quad arrays                   |  0.23 s
+     5    |  Cone using glut (Solid)                  |  0.22 s      
+	 6    |  Cone using glut (Wire)                   |  0.22 s      
+     7    |  Cone using triangles                     |  0.23 s  
+     8    |  Cone using triangle arrays               |  0.22 s
+     9    |  Cone using calculated triangles (Solid)  |  0.22 s
+	 
+All the tests ran at about the same speed.  Different shapes, and different 
+methods for rendering the different shapes seem to have little impact, if any, 
+on performance.  Most likely, the biggest performance hit comes from the actual 
+rendering of the object data (regardless of content) to the screen.

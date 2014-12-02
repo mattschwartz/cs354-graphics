@@ -1,0 +1,73 @@
+Project 3 Individual Written Questions 
+
+Name: Matt Schwartz
+Email Address: mattschwartz@utexas.edu
+
+1.  I have an array of the vertices of the 3D model, so writing them to a file
+    would be trivial.  I would have to also keep track of the number of 
+    vertical vertices in order to read them in correctly; this number is the
+    number of control points entered before subdivision, and increased during
+    subdivision.  I'm not sure what is meant by "am I able to adapt..."  
+    Adapt to reading in data from a file?  If that's the case, yes.  It would
+    be the same as getting control points from a user's mouse clicks.  I could
+    also write normal information to the file as a separate array, or just 
+    recompute the normals during rendering and not worry about writing them out.
+
+
+2.  C(0.8) = [9.928, 2.101], based on the short program I made that I've 
+    included below.  
+    First, consider the points as control points in a Bezier curve.
+    Then, subdivide each line segment between control points using the ratio
+    t:(1-t) = 0.8:0.2 and connect the points
+    Keep going until there is only one point remaining.
+    
+    (Source: http://en.wikipedia.org/wiki/De_Casteljau's_algorithm)
+    
+
+3.  The limit curve would resemble a parenthesis.  Without internal points, the
+    limit curve would resemble more of a C, with the corners becoming more 
+    rounded than before.  No, because an approximatory algorithm would probably
+    ignore internal points, or some internal points in the square and the 
+    resulting limit curve's shape for both would be the same.
+
+
+4.  For vertical subdivision, my algorithm ignores the 3D model, and only 
+    alters the 2D sketch control points.  This would work the same for any
+    given sketch that would produce 3D holes.  For horizontal subdivision,
+    I would increase the steps between each rotation; for example, originally
+    it might be 3 rotations of 120 degrees each.  One depth into horizontal
+    subdivision would create 5 rotations.  Similar to how it's done in my
+    project.  The only thing that would really need to change here is how
+    it calculates end points, since right now it assumes given sketches are
+    not closed.
+    
+    Because my algorithm forces end points to align with the axis of rotation,
+    a vase would not work.  Lifting that restriction would allow objects to be
+    drawn that are open-ended.  I think this is a similar situation as before,
+    I would just need to alter the way I calculate end points in the 
+    subdivision for the vase to look correct.
+    
+    
+    
+    
+    Short program:
+    public class Main {
+    public static void main(String[] args) {
+        double[] x = {0, 2, 4, 7, 9, 10, 12};
+        double[] y = {0, 2, -1, 2, 1, 5, -1};
+        double choose[] = {1, 6, 15, 20, 15, 6, 1};
+        
+        double t = Double.parseDouble(args[0]);
+        double sumX = 0;
+        double sumY = 0;
+        
+        for (int i = 0; i <= 6; i++) {
+            sumX += choose[i] * Math.pow(t, i) * Math.pow((1 - t), 6 - i)*x[i];
+            sumY += choose[i] * Math.pow(t, i) * Math.pow((1 - t), 6 - i)*y[i];
+        }
+        
+        System.out.println("Your point, sir: [" + sumX + ", " + sumY + "].");
+    }
+    
+    
+}

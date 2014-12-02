@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="Project 4" root=".">
+      <df name="Debug">
+      </df>
+      <df name="raytrace.dSYM">
+        <df name="Contents">
+          <df name="Resources">
+            <df name="DWARF">
+            </df>
+          </df>
+        </df>
+      </df>
+      <in>Cone.cpp</in>
+      <in>Cone.h</in>
+      <in>Cylinder.cpp</in>
+      <in>Cylinder.h</in>
+      <in>Polygon.cpp</in>
+      <in>Polygon.h</in>
+      <in>Sphere.cpp</in>
+      <in>Sphere.h</in>
+      <in>common.h</in>
+      <in>light.cpp</in>
+      <in>light.h</in>
+      <in>lowlevel.cpp</in>
+      <in>lowlevel.h</in>
+      <in>raytrace.cpp</in>
+      <in>raytrace.h</in>
+      <in>readppm.cpp</in>
+      <in>readppm.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>raytrace</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>/lusr/include</pElem>
+              <pElem>/lusr/X11/include</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="readppm.h" ex="true" tool="3" flavor="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

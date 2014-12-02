@@ -1,0 +1,59 @@
+Project 4 Individual Written Questions 
+
+Name: Matt Schwartz
+Email Address: mattschwartz@utexas.edu
+
+1.  (a) the window size is increased
+        - Increasing the window size increases the size of the raster and thus
+        the number of rays which need to be fired.  The running time of the ray
+        tracer will increase.
+    (b) all the objects are increased in size
+        - The number of rays fired will remain the same, no more objects have 
+        been added to the scene, so the interactions between the ray firings
+        and the objects remains the same.  The running time of the ray tracer
+        remains the same.
+    (c) more objects are added
+        - The number of rays fired hasn't changed, but each individual ray will
+        potentially interact with more objects.  Thus the ray tracer will take
+        more time to run.
+
+
+2.  It depends on what you're trying to accomplish as well as the constraints
+    on the rendering.  Ray-tracing produces images of such high level of 
+    detail that OpenGL simply cannot.  Its only downside is that it cannot
+    feasibly be rendered in real time.  OpenGL can be rendered in real time
+    but its results are less impressive.  If you can pre-render the scene,
+    doing it entirely with ray-tracing is preferrably because you would get
+    a better quality product.  
+    
+    Reflection - in OpenGL, reflections are just the same object flipped
+        across the plane parallel between the object and the reflective
+        object and clipped where necessary.  This is likely to result in many
+        visual artifacts and can be very difficult on non flat surfaces.
+        Ray tracing produces more realistic reflections and the reflecting
+        surface can be any shape.
+    Transparency - You can fake transparency in OpenGL by blending together
+        multiple materials.  The problem is this will look like just that.  This 
+        is fine if what you need is, say, a foggy window that merely partially 
+        obstructs the view.  No refraction can occur with this function,
+        however.  Ray-tracing will allow for refraction to occur, such as when
+        light passes through glass.
+    Shadows - shadows in OpenGL tend to be quite believable while producing
+        slight aliasing.  In this case, OpenGL's lower quality product is
+        less noticeable and can be used without total detriment to the
+        end result.
+
+
+3.  Because each object is placed in a cube or cube that it occupies, you know 
+    which cubes have no objects.  You can completely skip over these cubes
+    when you fire rays, saving time not having to calculate the intersection of
+    objects that don't exist.
+
+
+4.  Orthogonal projection.  The rays are shot parallel throughout the scene.  
+    You could write two functions, one for tracing rays under the orthogonal
+    projection and another for the perspective projection.  For the perspective
+    projection, you would need to fire the rays at some angle, instead of
+    straight out into infinity.  The angles of the rays being shot depend on
+    the camera matrix and how each object is seen from the perspective of
+    the camera viewfinder.

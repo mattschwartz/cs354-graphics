@@ -1,0 +1,37 @@
+/*
+ * README
+ * ------
+ * Include the names of your group members and any special instructions
+ * for compiling, etc., if you did something besides the standard
+ * Makefile.  Also, document any additional features in this file.
+ *
+ * Group Members: Matt Schwartz
+ *
+ */
+
+Controls:
+===============================================================================
+'w' - rotate the silhouette to create the 3-D model
+'e' - toggle for solid / wireframe faces (default: solid)
+'r' - toggle for faces / control points (default: faces)
+'a' - apply vertical subdivision
+'b' - apply horizontal subdivision
+'d' - cycle through Gouraud and Phong shading (default: Gouraud)
+'s' - toggle between at least two different shininess
+'z' - switch from 3-D mode to 2-D mode 
+'p' - wasn't implemented, but prints out a message about what it would do if it
+      were implemented.
+'q' - quit program
+
+Camera-specific controls:
+'c' - resets the camera
+'=' - zooms the camera out
+'C' - clears all control points, allowing the user to draw a new sketch
+===============================================================================
+
+It's not a good idea to subdivide vertically and horizontally to the max...
+
+Horizontal subdivision works, but end point calculations are off, so one end of
+the model appears tapered.  I consider it a feature, really.
+
+Lighting when switching to Phong can cause artifacts.  

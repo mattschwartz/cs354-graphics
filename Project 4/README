@@ -1,0 +1,29 @@
+/*
+ * README
+ * ------
+ * Include the names of your group members and any special instructions
+ * for compiling, etc., if you did something besides the standard
+ * Makefile.  Also, document any additional features in this file.
+ *
+ * Group Members: Matt Schwartz
+ *
+ */
+
+Controls:
+'q' - Terminates the program
+'a' - Toggles Anti-Aliasing
+'x' - Increases number of rays fired at each pixel (increases smoothing and 
+	  blending around each pixel)
+'X'	- Decreases number of rays fired at each pixel
+
+Extra stuff:
+	- Anti-aliasing
+	- I rewrote a bunch of the shape drawing functionality so that it utilizes
+	  C++'s object-oriented nature.  All shapes are Polygons and other shapes
+	  extend from the Polygon class.  
+	  
+	  
+Notes:
+	- Anti-aliasing is very slow.  I fire 10 rays at each pixel by default 
+	  because it looks best to me.  I've set it to true by default only to 
+	  ensure my work isn't missed.

@@ -1,0 +1,649 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="https://courses.utexas.edu/bbcswebdav/pid-1933618-dt-content-rid-2267237_1/courses/2010_fall_52495_CS_354/Assignments/Project%201%20-%20Rendering%203D%20Objects%20Using%20OpenGL%20and%20GLUT/index_files/filelist.xml">
+<link rel="Edit-Time-Data" href="https://courses.utexas.edu/bbcswebdav/pid-1933618-dt-content-rid-2267237_1/courses/2010_fall_52495_CS_354/Assignments/Project%201%20-%20Rendering%203D%20Objects%20Using%20OpenGL%20and%20GLUT/index_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Project 1: Rendering 3D Objects Using OpenGL and GLUT</title>
+</head><body style="" alink="#ff0000" bgcolor="white" lang="EN-US" link="#0000EE" vlink="#551A8B"><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="City">
+<o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="place">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Chandrajit Bajaj</o:Author>
+  <o:LastAuthor>Chandrajit Bajaj</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>14</o:TotalTime>
+  <o:Created>2005-09-05T14:56:00Z</o:Created>
+  <o:LastSaved>2005-09-05T15:10:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2581</o:Words>
+  <o:Characters>14712</o:Characters>
+  <o:Company>CCV</o:Company>
+  <o:Lines>122</o:Lines>
+  <o:Paragraphs>34</o:Paragraphs>
+  <o:CharactersWithSpaces>17259</o:CharactersWithSpaces>
+  <o:Version>11.6360</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:\BC14\D0D5;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-charset:129;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1342176593 1775729915 48 0 524447 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Batang;}
+a:link, span.MsoHyperlink
+	{color:#0000EE;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#551A8B;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Batang;}
+tt
+	{font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:Batang;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:482704187;
+	mso-list-template-ids:-1301751320;}
+@list l1
+	{mso-list-id:1663007141;
+	mso-list-template-ids:92693324;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2
+	{mso-list-id:1689941981;
+	mso-list-template-ids:983442034;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+
+
+
+<div class="Section1">
+
+<p class="MsoNormal"><b><span style="font-size:18.0pt;color:black">Project 1:
+Rendering 3D Objects Using OpenGL and GLUT</span><span style="color:black"> <br>
+</span></b><b><span style="font-size:18.0pt;color:black">Spring 2013,&nbsp;CS
+354,&nbsp;Computer Graphics</span></b><span style="color:black"> <br>
+</span><b><span style="font-size:18.0pt;color:black">Assigned: January 17,
+2012</span></b><span style="font-size:18.0pt;color:black"><br>
+
+<b>Due: February 12, 11:59pm</b></span><span style="color:black"> <o:p></o:p></span></p>
+
+<div class="MsoNormal" style="text-align:center" align="center"><span style="color:black">
+
+<hr align="center" size="2" width="100%">
+
+</span></div>
+
+<p class="MsoNormal"><span style="color:black"><br>
+<b>Goal</b><br>
+In this project you shall draw simple objects in three dimensions and modify
+their rendering and view, as you change parameters using a keyboard and a mouse.&nbsp;
+You shall learn about the graphics library OpenGL and also about GLUT, an
+OpenGL user interface toolkit. <o:p></o:p></span></p>
+
+<p><b><span style="color:black"><br>
+Project Specifications</span></b><span style="color:black"> <br>
+The starter code that has been provided implements a canvas that allows the
+user to switch between various rendering modes for various objects.&nbsp; The
+starter code already has support for rendering a unit cube using three
+different methods.&nbsp; For this project, you will be adding to the
+functionality of the canvas so that it can render a cone using three analogous
+methods, as well as rendering the cone from a user-controllable triangulation,
+and finally rendering more complex 3D objects.<o:p></o:p></span></p>
+
+<p><span style="color:black">For grading purposes, your program should compile
+and run on the <st1:city w:st="on"><st1:place w:st="on">ENS or Painter</st1:place></st1:city>
+basement Linux machines , although you are free to develop on whatever platform
+you wish.<o:p></o:p></span></p>
+
+<p><span style="color:black"><br>
+<b>Getting Started</b><br>
+Download the <a href="https://courses.utexas.edu/bbcswebdav/pid-5195617-dt-content-rid-22884328_1/xid-22884328_1">zip file</a> forthe starter code and
+use the "unzip" command.&nbsp; The program is written in plain C,
+although you may want to rename the .c files to .cpp if you are more
+comfortable using C++.&nbsp; If you are using a machine with graphics hardware
+(such as the ones in <st1:city w:st="on"><st1:place w:st="on">Painter and ENS</st1:place></st1:city>
+
+basement), make sure the non-Mesa libraries are being used in the
+Makefile.&nbsp; If you are using a machine without a graphics card, make sure
+the <st1:city w:st="on">Mesa</st1:city> libraries are being used (<st1:city w:st="on"><st1:place w:st="on">Mesa</st1:place></st1:city> is a software-only
+version of OpenGL, so that any machine can run it).&nbsp; To compile, type
+"make". This will produce the executable "canvas", which
+you can run by typing "./canvas". You will see a cube on a black
+background. Play around with this cube and cycle through the various display
+modes (or in other words, scenes) using the keyboard and mouse.<o:p></o:p></span></p>
+
+<p><b><span style="color:black"><br>
+Keyboard Commands<br>
+</span></b><span style="color:black">Keyboard commands are interpreted by the
+function myKeyHandler() in canvas.c.<o:p></o:p></span></p>
+
+<p><b><span style="color:black">d</span></b><span style="color:black"> - switch
+display modes (the Modes listed here are, in order, Display Mode 1, Display
+Mode 2, etc.):<o:p></o:p></span></p>
+
+<ol start="1" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cube using GLUT<o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cube using
+     quadrilaterals<o:p></o:p></li>
+
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cube using
+     quadrilateral arrays<o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cone using GLUT <b>*</b><o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cone using
+     triangles <b>*</b><o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cone using
+     triangle arrays<b>*</b><o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a cone using a
+     user-specified triangulation <b>*</b><o:p></o:p></li>
+
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw VRML2.0 objects <b>*</b><o:p></o:p></li>
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l0 level1 lfo1;tab-stops:list .5in">Draw a freeform scene <b>*</b><o:p></o:p></li>
+</ol>
+
+<div style="margin-left:30.0pt">
+
+<p class="MsoNormal"><span style="color:black">Items 1 - 3 are already
+implemented in the starter code as a programming reference and should not need
+to be changed.&nbsp; Items 4-9 will be implemented for this project. <o:p></o:p></span></p>
+
+</div>
+
+<p><b><span style="color:black">D</span></b><span style="color:black"> - go
+through the display mode list backwards.<br>
+<b>s</b> - toggle display styles between solid and wire frame.&nbsp; Solid and
+wire-frame styles apply only to GLUT-based display modes<br>
+<b>S</b> - same as <b>s</b><br>
+
+<b>,</b> and <b>&lt;</b> - rotate the model along its x axis<br>
+<b>.</b> and <b>&gt;</b> - rotate the model along its y axis<br>
+<b>/</b> and <b>?</b> - rotate the model along its z axis<br>
+
+<b>=</b> and <b>+</b> - zoom in and out<br>
+<b>c</b> - reset the model to its original orientation and zoom<br>
+<b>t</b> - run the Performance Test for the current display mode.&nbsp; The
+test returns the number of seconds needed for rendering 3 rotations of the
+model.<br>
+
+<b>z</b> - restore the window to its default size.&nbsp; (Needed before running
+the Performance Test for controlled testing).<br>
+<b>q</b> - quit the program<o:p></o:p></span></p>
+
+<p><b><span style="color:black">Mouse Commands</span></b><span style="color:black"><br>
+<b>left button </b>- Hold, then move the mouse to control rotations about the
+model's y-axis and x-axis<br>
+<b>middle button</b> - Hold, then move the mouse to control rotations about the
+model's y-axis and z-axis<br>
+
+<b>right button</b> - Hold, then move the mouse to zoom in and out<br>
+<br>
+This program uses the OpenGL graphics library to draw to the screen and the
+GLUT window manager for the user interface. Try to understand how the interface
+is being made in the main() function in canvas.c.&nbsp; Next, try to understand
+how the different cubes are being displayed using various OpenGL and GLUT
+functions.&nbsp; The cube in Display Mode 1 is being sent directly to the
+renderer by either the function glutSolidCube() or glutWireCube(). Refer to an
+OpenGL reference book or to the links provided at the end of this document to
+understand what the various functions are doing. For this project, you may
+ignore lighting and shading functions.<o:p></o:p></span></p>
+
+<p><b><span style="color:black"><br>
+A Note on VRML2.0<br>
+</span></b><span style="color:black">VRML2.0(Virtual Reality Modeling Language)
+is used to specify 3D geometric objects.&nbsp; For this assignment, Display
+Mode 8 uses data extracted from VRML files for a cube, dodecahedron,
+icosahedron, and pyramid.&nbsp; You will not be using actual VRML files in this
+assignment, but rather, the data extracted from VRML files.&nbsp; The 4 objects
+just mentioned will be collectively referred to as <span style="mso-spacerun:yes"> </span>VRML objects.<o:p></o:p></span></p>
+
+<p><b><span style="color:black"><br>
+Programming Checklist<br>
+</span></b><span style="color:black">The following is a a list of what needs to
+implemented in this project.<o:p></o:p></span></p>
+
+<ol start="1" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 4,
+     draw a cone using GLUT.&nbsp; The GLUT cone should have a radius of 1.0
+     and a height of 1.0 and should be completely blue a.k.a. glColor3f(0.0f,
+     0.0f, 1.0f).&nbsp; This mode needs to support the 's' toggle switch, so
+     that the user can switch between a solid cone and a wire-frame cone, just
+     like in Display Mode 1.&nbsp; When making the function call to GLUT, pick
+     whatever values look good for the number of slices and the number of
+     stacks.<o:p></o:p></li>
+
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="2" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 5,
+     draw a cone by iterating through the triangles in the vertex, index, and
+     color arrays for a cone in drawing.c.&nbsp; You will be using
+     glBegin(GL_TRIANGLES), and rendering each triangle in the order it is
+     specified in the arrays, along with the colors of each vertex.&nbsp; Refer
+     to Display Mode 2.<o:p></o:p></li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="3" type="1">
+
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 6,
+     draw a cone using array pointers.&nbsp; You will need to use
+     glEnableClientState(GL_VERTEX_ARRAY) and similar functions in order to
+     pass the vertex, index, and color arrays for a cone to the renderer.&nbsp;
+     Refer to Display Mode 3.<o:p></o:p></li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="4" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 7,
+     you will implement a calculated triangulation for the entire surface of a
+     cone and add the appropriate key bindings so that the user can control the
+     triangulation.&nbsp; The arguments to this calculated triangulation will
+     be the radius of the base (r), the height of the cone (h), and the number
+     of equally sized triangles used to triangulate the base of the cone
+     (n).&nbsp; Each of the n triangles in the base should share a common
+     vertex with all n-1 other triangles, namely, the center of the base.&nbsp;
+
+     From here, you should be able to compute a triangulation for the lateral
+     area of the cone using another n triangles, thus bringing the total number
+     of triangles to 2n.<br>
+     <br>
+     For this display mode, <span style="mso-spacerun:yes"> </span>calculate
+     the triangles using your knowledge of geometry and draw the set of
+     triangles to the screen using some form of glBegin().&nbsp; You should not
+     use any GLUT built-in functions. &nbsp; You may render each triangle as
+     you calculate its position; there is no need to create a vertex array or
+     an index array unless that makes your algorithm easier.&nbsp; Also, there
+     is no need to create a vertex color array (just render the entire cone in
+     blue a.k.a. glColor3f(0.0f, 0.0f, 1.0f)).&nbsp; Use the following initial
+     values and key bindings.&nbsp; For each key binding, print to stdout a
+     brief description of what changed each time the user presses the key (ex:
+     print "Radius increased by 0.1" when the user presses 'i').<o:p></o:p></li>
+
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="4" type="1">
+ <ul type="circle">
+  <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo2;tab-stops:list 1.0in"><b>r</b> - Initially
+      set to 1.0.&nbsp; Set 'i' to increase r by 0.1, and set 'I' to decrease r
+      by 0.1.&nbsp; Your program must make sure that r is kept greater than or
+      equal to 0.1.<o:p></o:p></li>
+  <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo2;tab-stops:list 1.0in"><b>h</b> - Initially
+      set to 1.0.&nbsp; Set 'o' to increase h by 0.1, and set 'O' to decrease h
+      by 0.1.&nbsp; Your program must make sure that h is kept greater than or
+      equal to 0.1.<o:p></o:p></li>
+
+  <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l1 level2 lfo2;tab-stops:list 1.0in"><b>n</b> - Initially
+      set to 8.&nbsp; Set 'p' to increase n by 1 and set 'P' to decrease n by
+      1.&nbsp; Your program must make sure that n is kept greater than or equal
+      to 3. <o:p></o:p></li>
+ </ul>
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="5" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 8,
+     render (one at a time) the 4 VRML objects given in the vertex and index
+     arrays in vrml.c by iterating through the arrays and rendering the faces
+     of the object one at a time.&nbsp; Use glColor3f(1.0f, 1.0f, 0.0f) to
+     color each of these objects.&nbsp; The VRML objects are specified in the
+     almost the exact same way as the cone for Display Mode 4, except in the
+     VRML index arrays, each face is terminated by a -1.&nbsp; For instance, an
+     index sequence of (0, 1, 2, -1, 3, 2, 1, -1) translates to two triangles,
+     where the first triangle is composed of vertices (0, 1, 2) in the vertex
+     array and the second triangle is composed of vertices (3, 2, 1) in the
+     vertex array.<br>
+
+     &nbsp;<br>
+     Since VRML faces are not restricted to triangles and quads, you will need
+     to use glBegin(GL_POLYGON) or glBegin(GL_LINE_LOOP) to render the faces of
+     the objects.&nbsp; It may be difficult to actually see the geometry of the
+     VRML objects if the faces are shaded in using glBegin(GL_POLYGON).&nbsp;
+     To fix this, replace glBegin(GL_POLYGON) with glBegin(GL_LINE_LOOP) so
+     that the outline of each face is rendered instead.&nbsp;
+     glBegin(GL_LINE_LOOP) is used just like how glBegin(GL_POLYGON) and
+     glBegin(GL_TRIANGLES) are used.&nbsp; Submit the version which uses
+     glBegin(GL_LINE_LOOP), but be sure to take a look at the
+     glBegin(GL_POLYGON) version so that you are familiar with its
+     drawback.&nbsp; Note that the coordinates of the VRML objects are not
+     normalized to be within the default viewing frustum, so you may need to
+     zoom in or zoom out to get a good look at them.<br>
+
+     &nbsp;<br>
+     Add the following key binding: '<b>v</b>' will be set to switch to the
+     next VRML object in this order: VRML cube, dodecahedron, icosahedron,
+     pyramid, back to cube, dodecahedron, and so on.&nbsp; On startup, the
+     default VRML object should be the VRML cube. Print a confirmation of the
+     current VRML object to stdout each time the user presses 'v'.<o:p></o:p></li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp; <o:p></o:p></span></p>
+
+<ol start="6" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Under Display Mode 9,
+     use what you've learned about OpenGL and Glut to render any scene of your
+     own design, using either material from this project or additional material
+     from the references.&nbsp; The goal of this section is to experiment with
+     OpenGL.&nbsp; Some suggestion include rendering a block pyramid using GLUT
+     cubes or drawing a simple face using GLUT spheres and GLUT cones.&nbsp;
+
+     The starter code has a brief example that shows how to use glPushMatrix()
+     and glPopMatrix() to render multiple objects in a scene.<o:p></o:p></li>
+</ol>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="color:black">&nbsp;<o:p></o:p></span></p>
+
+<ol start="7" type="1">
+ <li class="MsoNormal" style="color:black;mso-margin-top-alt:auto;mso-margin-bottom-alt:
+     auto;mso-list:l1 level1 lfo2;tab-stops:list .5in">Finally, run the
+     Performance Test on Display Modes 1 - 7 and record the running times for
+     each Display Mode.&nbsp; For Display Modes using GLUT, two tests should be
+     performed: one for the solid display style and one for the wire frame
+     display style.&nbsp; There should be a total of 9 tests.&nbsp; Arrange the
+     results in an ASCII table (no tabs, please) in your Group's README file,
+     and answer the following questions in the same file: Which Display Mode(s)
+     for the cone ran fastest and which ran slowest, or did they all run at
+     about the same speed?&nbsp; Based on what you have learned, write a one or
+     two sentence explanation for the observed running times.<o:p></o:p></li>
+
+	<br>
+	 Note: In the function
+     print_disp_style() in drawing.c, the two printf statements were
+     reversed.&nbsp; They should be switched around in your code before you
+     submit so that the correct update is printed.
+
+</ol>
+
+<p><b><span style="color:black"><br>
+Code Map</span></b><span style="color:black"><br>
+<b>canvas.c</b> - Handles basic GLUT initialization, keyboard input, camera
+control, and window resizing and reshaping.<br>
+<b>drawing.c, drawing.h</b> - Handles the drawing algorithms for each display
+mode and contains the raw data (vertex array, index array, color array) for
+cubes and cones.&nbsp; New display modes should be implemented here.<br>
+
+<b>vrml.c, vrml.h</b> - Handles the drawing of vrml objects and contains their
+raw data.&nbsp; The various components of the vrml display mode should be
+implemented here.<br>
+<b>mouse.c, mouse.h </b>- Handles mouse input.&nbsp; These files should not
+need to be changed.<br>
+<b>Makefile</b> - standard Unix makefile (not used if you are using Visual C++)<br>
+<b>README</b> - answers to questions in the Coding (team) portion of Project 1<br>
+
+<b>project1.txt</b> - answers to questions in the Written (individual) portion
+of Project 1<o:p></o:p></span></p>
+
+<p><b><span style="color:black">Extra Credit</span></b><span style="color:black"><br>
+Extra credit will be given for those projects that go above and beyond the requirements.
+This includes exceptional creativity and also incorporating more advanced techniques
+not yet covered in class.  Ideas for extra credit for this assignment include, but
+are not limited to, calculating more complex shapes dynamically (similar to what you
+did with the cone in Display Mode 7) and incorporating OpenGL shading.  <b>Briefly describe
+anything you feel deserves extra credit in your README file.</b>
+
+</span></p><p><b><span style="color:black">Written Questions for Each Team Member </span></b><span style="color:black">(20% of the project grade)<br>
+Each team member should write up the answers to these questions on their own
+and submit their work separately, as described in the next section.<o:p></o:p></span></p>
+
+<p><b><span style="color:black">1.</span></b><span style="color:black">&nbsp;
+You
+ have an array of vertices.  What would you need to do to produce an 
+object representation using vertex indices?  How would the original 
+array change?  What additional data structures would you need?
+<o:p></o:p></span></p>
+
+<p><b><span style="color:black">2.</span></b><span style="color:black">&nbsp;
+How many matrix modes are there in OpenGL and what are their use ?
+<o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><span style="color:black">3.</span></b><span style="color:black">&nbsp; 
+<!-- What are the differences between view-ports and the viewing frustum? -->
+I want 3 views of the same scene, each taking up 1/4 of my screen.  
+These three views should show the front, side and top views of the 
+object.  Describe in words what needs to be done with the viewport and 
+camera to accomplish this.  How does this affect the viewing frustum?
+<o:p></o:p></span></p>
+
+<p><b><span style="color:black">4.</span></b><span style="color:black">&nbsp;
+
+What is the role of GLUT, and where in OpenGL do you use it ?
+<o:p></o:p></span></p>
+
+<p><b><span style="color:black">5.</span></b><span style="color:black">&nbsp;
+Describe when and why you would use a single frame buffer.  Then describe when and why you would use a double frame buffer.
+<o:p></o:p></span></p>
+
+<p><b><span style="color:black">6.</span></b><span style="color:black">&nbsp;
+Describe
+ a reasonable alternative to the line equation representation y=mx+b for
+ use in displaying a line segment on the screen.  What are its 
+advantages over ax+by+c=0?
+<o:p></o:p></span></p>
+
+<p><b><span style="color:black"><br>
+What and How to Submit</span></b><span style="color:black"> <br>
+
+Your program should compile and run on the Painter or ENS basement machines.
+Once you have verified this,&nbsp; submit the following files: <o:p></o:p></span></p>
+
+<p><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp; Makefile<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Source code&nbsp; (.c and .h files)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; README<o:p></o:p></span></p>
+
+<p><span style="color:black">The README file should be a plain text file and it
+should clearly contain: the names of everyone in the Group, an ASCII table of
+the Performance Test results (please do NOT use the tab character in your
+table), and the answers to the Performance Test questions.&nbsp; In addition,
+if appropriate, you may also write about what extra things you did for the
+project, any special compilation instructions, what new ideas you came up with,
+etc; please keep such a&nbsp; discussion short and to the point. <o:p></o:p></span></p>
+
+<p><span style="color:black">Change into your source code directory and submit
+using:<br>
+</span><b><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:black"><br>
+<tt>turnin -submit egdaniel cs354_project1_code *</tt></span></b><span style="color:black"><o:p></o:p></span></p>
+
+<p><span style="color:black">to submit everything in the directory, or replace
+* with the names of the specific files and directories you wish to
+submit.&nbsp; Please submit only one copy of the code for each group (it does
+not matter which group member submits the code).<o:p></o:p></span></p>
+
+<p><span style="color:black">For the answers to the "Written Questions for
+Each Team Member", each team member should independently work on and write
+up the answers in a file called:<o:p></o:p></span></p>
+
+<p><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp; project1.txt.<o:p></o:p></span></p>
+
+<p><span style="color:black">The file should also be a plain text file which
+should contain the answer to the above "Written Questions for Each Team
+Member."&nbsp; This is the only file that needs to be submitted for the
+Written portion of Project 1.<o:p></o:p></span></p>
+
+<p><span style="color:black">Each team member will need to submit his or her
+own writeup file using:<br>
+
+</span><b><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:black"><br>
+<tt>turnin -submit egdaniel cs354_project1_written project1.txt</tt></span></b><span style="color:black"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="color:black"><br>
+<a href="https://courses.utexas.edu/bbcswebdav/pid-5195617-dt-content-rid-22884329_1/courses/2013_spring_53485_CS_354/turnin.html">Here</a> is a short note on how to use the
+"turnin" program. <o:p></o:p></span></p>
+
+<p><span style="color:black">Refer the "Grading" section&nbsp; in the
+syllabus <!-- <a href="http://www.cs.utexas.edu/users/bajaj/graphics07/cs354/syllabus.html">Syllabus</a> 
+on the course home page--> for grading and late policy. <o:p></o:p></span></p>
+
+<p><span style="color:black"><br>
+<b><br>
+Helpful OpenGL and GLUT References</b><br><br>
+
+OpenGL standards, documentation, and sample code can be found at<br>
+<a href="http://www.opengl.org/">http://www.opengl.org/<br>
+</a><br>
+
+The OpenGL Programmers Guide: Offical Guide to Learning OpenGl Versions 3.0 & 3.1 (7th ed). by Dave Shreiner.<br><br>
+
+GLUT Online Tutorial (see Introduction-&gt;Setup,
+Introduction-&gt;Initialization, Introduction-&gt;Animation, and
+Input-&gt;Keyboard).<br>
+<a href="http://www.lighthouse3d.com/opengl/glut/">http://www.lighthouse3d.com/<br>
+</a> Also can be used for VRML and W3C.<br>
+<b><br>
+
+</b></span></p><p><b><span style="color:black"><o:p>&nbsp;</o:p></span></b></p><b>
+
+<!--
+You may also check the <a
+ href="http://www.cs.utexas.edu/users/bajaj/graphics23/cs354/index.html">course
+home page</a> for various OpenGL links, such as how to set up GLUT for
+Windows.<br>
+--></b></div><b>
+
+
+
+
+</b></o:smarttagtype></o:smarttagtype></body></html>

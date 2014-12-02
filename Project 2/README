@@ -1,0 +1,74 @@
+/*
+ * README
+ * ------
+ * Put your L-System descripton and answers to the two group questions
+ * here.  Also, include the names of your team members and any special
+ * instructions for compiling, etc., if you used something besides the
+ * standard Makefile.
+ *
+ * Group Members: Matt Schwartz
+ * Email Addresses: mattschwartz@utexas.edu
+ */
+ 
+L-System Rules
+    S − Scale by factor determined by depth
+    F − Move Forward and draw branch
+    L0 − Center of tree
+    L1 − Left half of tree
+    L2 − Right half of tree
+    L − Draw Leaf
+    "+" − Turn Right
+    "−" − Turn Left
+    "#" − Rotate in 3D to the left
+    "$" − Rotate in 3D to the right
+    "[" − Push
+    "]" − Pop
+
+Axioms
+L0 -> S F [ − S F L1 ] [ # - S F L1 ] S F [ + S F L2 ] [ $ + S F L2 ] S F L0
+L1 -> S F [ − S F L1 ] [ # - S F L1 ] S F [ + S F L ] S F L1
+L2 -> S F [ − S F L ] S F [ + S F L2 ] [ $ S F L2] S F L2
+
+Note: Scaling occurs only when drawing the branches which is why the grammar has an S before every F.
+
+Controls
+    '/': Rotate about y axis counter-clockwise
+    '?': Rotate about y axis clockwise
+    'l': Shift view to the left
+    'r': Shift view to the right
+    'u': Shift view up
+    'v': Cycle through the seasons in order
+    'V': Cycle through the seasons in reverse order
+    't': Cycle through available tree barks
+    'T': Cycle through available tree barks in reverse
+    '.': Increase branching angle (max of 35)
+    ',': Decreasing branching angle (min of 0)
+    'd': Shift view down
+    'a': Increase depth of L-system 
+    's': Decrease depth of L-system
+    'p': Toggle projection
+    'q': Quit program
+
+Extra features
+    Added randomly colored leaves
+    Added seasons which change the color of the leaves
+    Added different types of bark 
+    Allow user to alter branching angle
+    Added apples which are randomly dispersed throughout the tree
+    Added more realistic-looking branches (note the trunk and end branches, 
+        especially; less subtle are the way left and right branches seamlessly
+        merge together)
+    Added 3D extrusion of branches so that the tree is not just a flat piece
+        of cardboard
+    Leaves are added with random variations in their rotations about the x and
+        y axes so that they aren't all a uniform rotation, which looked bland
+
+Questions
+1) How does the plant change visually when you switch between a perspective projection and an orthographic projection?
+    In my program, it flips the image around completely.  The visual difference is maybe more subtle
+    than I can see, so I'm going to assume that what should happen is it should appear fish-eyed.  That is,
+    the front of the tree should appear closer than the back of the tree whenever I toggle to the 
+    perspective projection (hence, perspective).
+2) Why is this?
+    This is because the perspective projection corrects for perspective, where orthographic projection is 
+    just a parallel projection of the view and does not take into consideration depth and perspective.

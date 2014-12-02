@@ -1,0 +1,174 @@
+Project 2 Individual Written Questions
+
+Name:          Matt Schwartz
+Email Address: mattschwartz@utexas.edu
+
+1.a. Yes.  Translations can be done in any order with the same results.
+translateBy(1, 0, 0);
+translateBy(0, 2, 0);
+
+In this order, the resulting model view matrix is:
+ 1.00  0.00  0.00  1.00 
+ 0.00  1.00  0.00  2.00 
+ 0.00  0.00  1.00  0.00 
+ 0.00  0.00  0.00  1.00 
+
+translateBy(0, 2, 0);
+translateBy(1, 0, 0;
+
+In this order, the resulting model view matrix is:
+ 1.00  0.00  0.00  1.00 
+ 0.00  1.00  0.00  2.00 
+ 0.00  0.00  1.00  0.00 
+ 0.00  0.00  0.00  1.00 
+
+The same matrix.  Note that the resulting matrix is the addition of all
+previous translations.  Addition is a commutative operation and likewise are
+3D translations.
+
+1.b. Yes, for the same reasons as 1.a.
+rotateBy(35, 1, 0, 0);
+translateBy(1, 0, 0);
+
+In this order, the resulting model view matrix is:
+ 1.00  0.00  0.00  1.00 
+ 0.00  0.82 -0.57  0.00 
+ 0.00  0.57  0.82  0.00 
+ 0.00  0.00  0.00  1.00 
+
+translateBy(1, 0, 0);
+rotateBy(35, 1, 0, 0);
+
+In this order, the model view matrix is:
+ 1.00  0.00  0.00  1.00 
+ 0.00  0.82 -0.57  0.00 
+ 0.00  0.57  0.82  0.00 
+ 0.00  0.00  0.00  1.00 
+
+Which is the same matrix.  Rotations alter different values within
+the model view matrix from translations so no matter their order, the
+resulting matrix will always be the same.  
+
+1.c. No.  Rotations perform matrix multiplication on the same values and as we all
+know, matrix multiplication is not commutative.  Though, in some instances, different
+rotations can produce the same matrix, that is usually because of rotations about the
+same axis (such as 2 about-x rotations).  Here is an example that didn't prove 
+commutativity:
+
+rotateBy(25, 1, 0, 0);
+rotateBy(25, 0, 1, 0);
+rotateBy(-36, 1, 0, 0);
+
+Produced the matrix:
+ 0.91 -0.25  0.34  0.00 
+ 0.18  0.96  0.22  0.00 
+-0.38 -0.14  0.91  0.00 
+ 0.00  0.00  0.00  1.00 
+
+While…
+rotateBy(25, 1, 0, 0);
+rotateBy(-36, 1, 0, 0);
+rotateBy(25, 0, 1, 0);
+
+Produced a different matrix:
+ 0.91  0.00  0.42  0.00 
+-0.08  0.98  0.17  0.00 
+-0.41 -0.19  0.89  0.00 
+ 0.00  0.00  0.00  1.00 
+
+
+2  a. A first-person shooter game: Perspective projection because it is necessary
+for the user to distinguish near players from farther players that a perspective
+projection helps with.
+
+   b. A CAD package for use in designing airplane parts: Orthographic projection because
+the perspective projection can screw up the design of the part.  It's easier to see the design without it being corrected for perspective.
+
+   c. An architectural design package: Both might prove helpful.  While designing specific features of the architecture, seeing the shapes would be easier with an orthographic projection but to be able to see what the finished architecture might look like in real life visually, using a perspective projection would give the designer a better view.
+
+   d. A iPod navigation system for hang glider pilots: Assuming I'm understanding the question correctly… Hang glider pilots would need to see a 2-dimensional view of the ground while flying so a perspective projection wouldn't help much for that.  So an orthographic projection would be preferred for this system.
+
+
+3. Rotations and translations are commutative with each other so any order of rotations and translations can be switched without affecting the final result.  With that in mind, we can also combine the rotations into a single rotation about the origin because each rotation separately merely changes the orientation.  We can combine all the rotations into a single rotation if we know where the final orientation settles.  Translations are additive so they can also be combined into a single translation if we know the all the translations being performed.  As shown in 1b, translations and rotations are commutative so doing a translation first, then a rotation is the same as a rotation then a translation.  There is no real matrix as far as the model view matrix is concerned.  Performing a lumped-together rotation about the origin is equivalent to doing a single rotation about a single axis.  Likewise with a lumped-together translation matrix.
+
+
+4.  If there exists an axis which is unchanged throughout the vertices definition, the polygon is planar.
+
+The following polygon is planar across the y axis because the y axis is unchanged throughout the definition.
+[ 0.5, 0.0, 1.0]
+[ 1.0, 0.0, 0.5]
+[ 0.5, 0.0, 1.5]
+[-0.5, 0.0, 1.0]
+
+Changing one of them causes the polygon to drift into 3D and thus nonplanar.
+[ 0.5, 0.0, 1.0]
+[ 1.0, 1.0, 0.5]
+[ 0.5, 0.0, 1.5]
+[-0.5, 0.0, 1.0]
+
+
+5.  A matrix showing a 23.5 degree axial tilt representing the earth's:
+    0.92 -0.40  0.00  0.00 
+    0.40  0.92  0.00  0.00 
+    0.00  0.00  1.00  0.00 
+    0.00  0.00  0.00  1.00 
+
+    A matrix showing the distance from earth to the sun (in millions of miles):
+    1.00  0.00  0.00 90.00 
+    0.00  1.00  0.00  0.00 
+    0.00  0.00  1.00  0.00 
+    0.00  0.00  0.00  1.00 
+
+    The earth rotates about the sun's x axis 360 degrees in 365 days.  Since we're only interested in 1 hour, or 1/24 of 1 day, the earth rotates about the sun's x axis about 0.041 degrees which is represented by the following matrix:
+    1.00 0.00     0.00      0.00 
+    0.00 1.00     -0.000716 0.00
+    0.00 0.000716 1.00      0.00
+    0.00 0.00     0.00      1.00
+
+  Meanwhile, the earth rotates about its y axis 360 degrees in 24 hours.  Since we're only interested in 1 hour, we want 1/24 of that, or 360*1/24 = 15 degrees, as represented by the following matrix:
+    0.97  0.00  0.26  0.00 
+    0.00  1.00  0.00  0.00 
+   -0.26  0.00  0.97  0.00 
+    0.00  0.00  0.00  1.00 
+
+  Now, we just multiply all these matrices together in order to produce a single matrix to model the new position of the earth:
+
+   Final matrix = R(rotate)R(revolve)R(23.5)T(90million)Earth
+
+   First, multiply the translation by the axial tilt of the earth matrices to produce:
+    0.920 -0.400  0.000 90.000
+    0.400  0.920  0.000  0.000
+    0.000  0.000  1.000  0.000
+    0.000  0.000  0.000  1.000
+
+    Then multiply this by the revolution around the sun:
+    0.920000 -0.400000  0.000286 90.000000
+    0.400000  0.920000 -0.000659  0.000000
+    0.000000  0.000716  1.000000  0.000000
+    0.000000  0.000000  0.000000  1.000000
+
+    And, finally we multiply by the total rotation in 1 hour of the earth to get:
+    0.892326 -0.400000  0.239477 90.000000
+    0.388171  0.920000  0.103361  0.000000
+   -0.260000  0.000716  0.970000  0.000000
+    0.000000  0.000000  0.000000  1.000000
+
+
+6.  For each iteration:
+    Scale by 1/3 * current depth
+      // draw bottom left triangle
+      draw an equilateral triangle
+    push
+      // draw upper triangle
+      translate in y axis up 1/2 height of triangle
+      translate to the right by 1/4 base of triangle
+      draw an equilateral triangle
+    pop
+
+    push
+      // draw lower right triangle
+      translate in x axis by 1/2 base of triangle
+      draw an equilateral triangle
+    pop
+
+      
